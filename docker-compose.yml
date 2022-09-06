@@ -1,0 +1,15 @@
+version: '2'
+services:
+  playwithspring-server:
+    container_name: playwithspringservercontainer
+    build:
+      dockerfile: Dockerfile
+    image: playwithspring:latest
+    ports:
+      - 8080:8080
+    networks:
+      - home-network
+
+networks:
+  home-network:
+    driver: bridge

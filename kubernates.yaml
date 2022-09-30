@@ -1,0 +1,22 @@
+apiVersion : apps/v1
+kind : Deployment
+metadata :
+  name : playwithkube-spring
+spec :
+  selector :
+    matchLabels :
+      app : playwithkube-spring
+  replicas : 2
+  template :
+    metadata :
+      labels :
+        app : playwithkube-spring
+    spec :
+      containers :
+        - name : spring-boot-containers
+          image : .
+          imagePullPolicy : No
+          ports :
+            - containerPort : 8080
+
+

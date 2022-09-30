@@ -2,8 +2,7 @@ version: '2'
 services:
   playwithspring-server:
     container_name: playwithspringservercontainer
-    build:
-      dockerfile: Dockerfile
+    build: .
     image: playwithspring:latest
     ports:
       - 8080:8080
